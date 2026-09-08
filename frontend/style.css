@@ -1,0 +1,112 @@
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    background: #f19666;
+    font-family: 'Poppins', sans-serif;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+}
+
+/* --- FORM ĐĂNG NHẬP CĂN GIỮA --- */
+.form-box {
+    background: #ffffff;
+    width: 90%;
+    max-width: 400px;
+    padding: 40px;
+    border-radius: 20px;
+    box-shadow: 0 20px 40px rgba(0,0,0,0.15);
+    text-align: center;
+    position: relative;
+    
+    /* Hoạt ảnh nảy nhẹ và mờ dần ra khi vừa tải trang */
+    opacity: 0;
+    transform: translateY(30px) scale(0.9);
+    animation: formAppear 0.8s cubic-bezier(0.175, 0.885, 0.32, 1.275) 0.2s forwards;
+}
+
+@keyframes formAppear {
+    to {
+        opacity: 1;
+        transform: translateY(0) scale(1);
+    }
+}
+
+/* --- TRANG TRÍ CHI TIẾT FORM --- */
+.close-btn {
+    position: absolute;
+    top: 20px;
+    right: 20px;
+    width: 30px;
+    height: 30px;
+    background: #f0f0f0;
+    border: none;
+    border-radius: 50%;
+    color: #888;
+    font-size: 18px;
+    cursor: pointer;
+    transition: 0.3s;
+}
+
+.close-btn:hover { 
+    background: #e0e0e0; 
+    color: #333; 
+}
+
+.form-box h2 {
+    color: #f19666;
+    margin: 10px 0;
+    font-size: 26px;
+}
+
+.form-box p {
+    color: #888;
+    font-size: 14px;
+    margin-bottom: 30px;
+    line-height: 1.5;
+}
+
+.input-group {
+    margin-bottom: 15px;
+}
+
+.input-group input {
+    width: 100%;
+    padding: 15px 20px;
+    border: none;
+    background: #f5f5f5;
+    border-radius: 12px;
+    font-size: 14px;
+    font-family: inherit;
+    outline: none;
+    transition: 0.3s;
+}
+
+.input-group input:focus { 
+    background: #ebebeb; 
+}
+
+.submit-btn {
+    width: 100%;
+    padding: 16px;
+    background: #f19666;
+    color: white;
+    border: none;
+    border-radius: 12px;
+    font-size: 16px;
+    font-weight: 600;
+    cursor: pointer;
+    margin-top: 15px;
+    transition: 0.3s;
+    letter-spacing: 1px;
+}
+
+.submit-btn:hover {
+    background: #e08555;
+    transform: translateY(-2px);
+}
